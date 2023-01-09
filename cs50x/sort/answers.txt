@@ -1,0 +1,12 @@
+sort1 uses: Bubble
+Bubble
+How do you know?: Quicker on the sorted txts
+Quicker on the sorted txts
+sort2 uses: Merge
+Merge
+How do you know?: Quickest to do all sorting tasks
+Quickest to do all sorting tasks
+sort3 uses: Selection
+Selection
+How do you know?: Quicker than Bubble on all fronts but sorted txts but not as quick as merge on any
+Quicker than Bubble on all fronts but sorted txts but not as quick as merge on any

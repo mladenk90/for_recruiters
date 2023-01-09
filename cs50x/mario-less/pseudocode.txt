@@ -1,0 +1,5 @@
+Prompt for height (get_int)
+if
+height < 1 or > 8 go back 1 step
+else
+printf("i, i++, \n")

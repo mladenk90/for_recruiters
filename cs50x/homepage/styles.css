@@ -1,0 +1,25 @@
+.about{
+    font-family: verdana;
+    text-emphasis: underline;
+}
+
+h1 {
+    color : blue;
+}
+
+li:hover {
+    color : red;
+}
+li:link {
+    color : pink;
+}
+
+h4.about {
+    color: green;
+}
+h3.about{
+    color: orange;
+}
+.containerp-5{
+    color: red;
+}

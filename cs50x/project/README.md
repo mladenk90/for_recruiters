@@ -1,0 +1,17 @@
+# MMail - Mladen Mail
+#### Video Demo:  <https://www.youtube.com/watch?v=CZkGg7GF0nI>
+#### Description:
+TODO
+###### I have created an email web app that has only basic features including email inbox, the ability to create emails, send emails, and reply to emails. My app.py incorporated a lot of the same features that were used in the finance problem set. I also include the helpers.py to help with my app.py but adjusted the code. I also used a similar CSS file but added a little to it in order to tidy it up a bit.
+
+###### App.py includes the ability to configure the applicateion and ensure it is autoreloaded. Also has the ability to configure session to use filesystem, configure CS50 to use SQL database created for this project, and applies helpers.py as well. I have included routes for the following and also have matching html templates for all routes; Inbox/Homepage, Create New Email, Sent Email Inbox, View ALL Emails, Reply to Emails, Login, Logout, and Register.
+
+###### First I went back to the python code we had written for the finance web app and re used what i needed. I made sure the Login, Logout, and Register routes were all properly working. Once those were created, i made sure i had a SQL database set up for use. I will include all tables of database in upcoming paragraph. Once i was able to register and login, i created a homepage/index which had a basic homepage with the ability to view your inbox. Once that was set up, i had to implement the ability to send emails as well which i tested by sending myself a test email and made sure it showed in Inbox and Sent Inbox. Then i had to implement the ability to reply to emails that were received.
+
+###### Project folder contains the following; Static folder which only has the CSS file, Templates folder for all html routes which is will describe in upcoming paragraph, app.py which was just described previously, helpers.py which was described previously as well, project.db which is the SQL database that was used for this web app, this README, and requirements.txt.
+
+###### requirements.txt includes cs50, Flask, Flask-Session, requests. SQL database includes two tables, emails and users. emails includes six columns: id, sender, receiver, subject, body, timestamp. users includes three columns: id, username, hash.
+
+###### Templates folder includes apology.html, create.html, email.html, index.html, layout.html, login.html, register.html, reply.html. First i created the layout.html route to allow myself to use that in future html routes to save time and energy. I recycled the apology route from the finance problem set. Then we set up the login and register routes Once that was sorted, i set up html routes that were matching their app.py routes counterparts. First we made a homepage/index then made sure the create and sent routes were incorporated with the same route. Also had to make sure we were applying the correct routes to our database through our Jinja code. Once all that was set, we made the reply route and made sure they all worked together.
+
+###### That's all, folks. Thank you for offering this class for free and allowing people like myself to get our foot in the door of the programing world.

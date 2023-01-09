@@ -1,0 +1,83 @@
+.add-song{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.all-song{
+    display: flex;
+    flex-direction: center;
+    margin: 15px;
+    justify-content: flex-start;
+}
+
+.song{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid grey;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+html, body, .view{
+  height: 100%;
+}
+
+#mobile-box {
+  width: 360px;
+}
+
+.card, .view {
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card h5 a {
+  color: #0d47a1;
+}
+
+.card h5 a:hover {
+  color: #072f6b;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.playpause-track{
+  padding: 25px;
+  opacity: 0.8;
+  align-items: center;
+  transition: opacity .2s;
+}
+
+.playpause-track:hover{
+  opacity: 1.0;
+}
+
+.slider_container {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.current-time, .total-duration {
+  padding: 10px;
+}
+
+.seek_slider{
+  height: 5px;
+  background: black;
+  opacity: 0.7;
+  width: 60%;
+}
+i.fa-play-circle, i.fa-pause-circle{
+  cursor: pointer;
+  
+}

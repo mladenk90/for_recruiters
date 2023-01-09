@@ -1,0 +1,27 @@
+{% extends "capstone/layout.html" %}
+
+{% block body %}
+    <h2>Liked Songs</h2>
+    
+    <div class="row mx-6">
+        {% for song in songs %}
+            <div class="card mx-2" style="width: 20rem;">
+                <img class="card-img-top" src="{{ song.image }}" alt="{{ song.title }}">
+                <div class="card-body">
+                    <h3 class="card-title">{{ song.title }}</h3>
+                    <a href="{% url 'song' id=song.id %}" class="btn btn-primary">View Details</a>   
+                </div>           
+            </div>
+        {% endfor %}
+    </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination d-flex justify-content-center">
+                {% if page_songs.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_songs.previous_page_number }}">Previous Page</a></li>
+                {% endif %}
+                {% if page_songs.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_songs.next_page_number }}">Next Page</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+{% endblock %}

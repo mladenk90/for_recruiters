@@ -1,0 +1,38 @@
+.new-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.all-post{
+    display: flex;
+    flex-direction: center;
+    margin: 15px;
+    justify-content: flex-start;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid grey;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.content{
+    font-size: 10px;
+}
+
+.user{
+    font-size: 15px;
+}
+
+.username{
+    font-size: 15px;
+}
+
+.date{
+    color: gray;
+    font-size: 12px;
+}

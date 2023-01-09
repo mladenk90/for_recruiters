@@ -1,0 +1,15 @@
+textarea {
+    min-height: 400px;
+}
+
+.read{
+    background-color: darkgray;
+}
+
+.unread{
+    background-color: white;
+}
+
+.email-group-item {
+    border: black 1px solid;
+}

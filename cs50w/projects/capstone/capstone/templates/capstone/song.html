@@ -1,0 +1,64 @@
+{% extends "capstone/layout.html" %}
+
+{% block body %}
+
+    {% if is_liked %}
+        <form action="{% url 'unlike song' id=song.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn_danger">Unlike Song</button>
+        </form>
+    {% else %}
+        <form action="{% url 'like song' id=song.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn_success">Like Song</button>
+        </form>
+    {% endif %}
+
+
+    <!-- Content -->
+<div class="container d-flex justify-content-center my-4 mb-5">
+
+    <div id="mobile-box">
+  
+      <!-- Card -->
+      <div class="card">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img class="card-img-top" src="{{ song.image }}"
+            alt="{{ song.title }}">
+          <a href="{{ song.title }}">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body text-center">
+  
+          <h5 class="h5 font-weight-bold">{{ song.artist }}</h5>
+          <h6 class="h5 font-weight-bold">{{ song.title }}</h6>
+  
+        <audio style="width: 100%;">
+          <source src="{{ song.media.id }}" type="audio/mp3"/>
+        </audio>
+          
+          
+          <div class="buttons">
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+          </div>
+          <div class="slider_container">
+            <div class="current-time"></div>
+            <input type="range" min="1" max="100"
+              value="0" class="seek_slider" onchange="seekTo()">
+            <div class="total-duration"></div>
+          </div>
+          
+  
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+  </div>
+  <!-- Load the main script for the player -->
+  
+  <!-- Content -->
+
+{% endblock %}
